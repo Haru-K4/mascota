@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaración Simple</title>
+    <link rel="stylesheet" href="assets/styles/estilos.css">
+    <script src="assets/js/scripts.js" defer></script>
+</head>
+<body>
+<header>
+    <section id="navegar">
+        <h1>Calculadora de años y IMC de su mascota</h1>
+        <nav>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu">
+                <li><a href="#edad">Calcule la edad de su mascota</a></li>
+                <li><a href="#IMC">Calcule el IMC de su mascota</a></li>
+            </ul>
+        </nav>
+
+</header>
+<main>
+    <section id="datos">
+        <h2>LUNA</h2>
+        <img src="assets/img/luna.jpg">
+
+    </section>
+    <section id="edad">
+        <h2>Calculadora de Edad de Perro</h2>
+        <form>
+            <label for="edadPerro">Ingresa la edad de tu perro (en años):</label><br>
+            <input type="number" id="edadPerro" name="edadPerro" step="0.01"><br><br>
+            <button type="button" onclick="calcularEdad()">Calcular Edad Real</button>
+        </form>
+        <div id="resultado"></div>
+    </section>
+    <section id="IMC">
+        <h2>Calculadora de IMC de Perro</h2>
+        <form>
+            <label for="pesoPerro">Ingresa el peso de tu perro (en kg):</label><br>
+            <input type="number" id="pesoPerro" name="pesoPerro" step="0.01"><br><br>
+            <label for="alturaPerro">Ingresa la altura de tu perro (en metros):</label><br>
+            <input type="number" id="alturaPerro" name="alturaPerro" step="0.01"><br><br>
+            <button type="button" onclick="calcularIMC()">Calcular IMC</button>
+        </form>
+        <div id="resultado"></div>
+    </section>
+</main>
+
+<script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const menu = document.querySelector('.menu');
+
+    menuIcon.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+</script>
+</body>
+</html>
